@@ -1,0 +1,455 @@
+/* 폰트먼저 리셋먼저 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+@import url(./reset.css);
+@import url(./common.css);
+
+
+/* .ad-box{
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 91px;
+} */
+/* .ad{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.ad img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ad .ad-ck{
+    position: absolute;
+    right: 103px;
+    bottom: 0;
+
+    width: 150px;
+    padding: 3px 2px 5px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    overflow: hidden;
+    color: #fff;
+} */
+.ad-box{
+    overflow: hidden;
+    position: relative;
+    height: 90px;
+}
+.ad-box img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* .chk-wrap{
+    position: relative;
+    bottom: 8px;
+    right: 0px;
+    font-weight: 700;
+}
+.chk-wrap input{
+    position: absolute;
+    top: 0;left: 0;
+    visibility: hidden;
+}
+.chk-wrap label{
+    padding-left: 20px;
+    position: relative;
+}
+.chk-wrap label::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 15px;height: 15px;
+    border: 1px solid #000;
+} */
+.chk-wrap{
+    position: absolute;
+    bottom: 8px;
+    /* right: 382px; */
+    right: 102px; 
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    font-size: 12px;
+    color: #fff;
+    padding: 3px 2px 5px;
+}
+.chk-wrap input{
+    position: absolute;
+    top: 50%;left: 0;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+.chk-wrap label{
+    padding-left: 20px;
+}
+.chk-wrap label::before{
+    content: '';
+    position: absolute;
+    top: 50%;left: 0px;
+    transform: translateY(-50%);
+    width: 15px;height: 15px;
+    margin-left: 5px;
+    background-color: #fff;
+}
+.chk-wrap label.active::before{
+    background: #f00; /* 체크박스를 꾸며주는거임 */
+}
+.chk-wrap .btn-close{
+    width: 9px;
+    height: 9px;
+    background: url(../image/icon/btn_allmenu_close.png) no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
+/* header */
+.top-area{margin-top: -1px;}
+.top-area .common-inner{
+    overflow: hidden;
+    height: 48px;
+    line-height: 48px;
+}
+
+.top-area .logo{
+    width: 105px;
+    height: 27px;
+    /* display: inline-block; */
+    float: left;
+    background-position: -5px -165px;
+    margin-right: 70px;
+    margin-top: 8px;
+}
+.top-area .logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.top-area .gnb-area{
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+.top-area .gnb-area .gnb-list{
+
+}
+.top-area .gnb-area .gnb-item{float: left;}
+.top-area .gnb-area .gnb-item+.gnb-item{
+    margin-left: 20px;
+}
+.top-area .gnb-area .gnb-item:hover{color: #2292e9;}
+
+.top-area .login-list{
+    float: right;
+    font-weight: bold;
+}
+.top-area .login-item{
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.top-area .gnb-area .login-item+.login-item{
+    float: left;
+}
+.top-area .gnb-area .login-item:hover{color: #2292e9;}
+
+
+
+.bottom-area .common-inner{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+.bottom-area .logo{
+    background: url(../image/logo/logo_new_2019.png) no-repeat;
+
+    margin: 38px 0 30px;
+    float: left;
+    width: 178px;
+    height: 51px;
+}
+.bottom-area .logo a{ /* 왜 100% 안됨? 그래야 전체를 클릭할수있는거아닌가 */
+    /* width: 100%; */
+    width: 178px;
+    height: 51px;
+}
+
+.bottom-area .search-area{
+    width: 460px;
+    height: 42px;
+    border: 3px solid #2292e9;
+    /* position: absolute;
+    left: 50%;
+    top: 40px; */
+    position: relative;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+.bottom-area .search-area .input-search{
+    float: left;
+    width: calc(100% - 46px);
+    border: 0;
+    padding: 0 10px;
+    height: 36px;
+    line-height: 36px;
+    
+    box-sizing: border-box;
+}
+.bottom-area .search-area input::placeholder{
+    color:#2292e9;
+}
+.bottom-area .search-area img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 47px;
+}
+.search-area .btn-keybored{
+    background: url(../image/icon/keyboard.png) no-repeat center;
+    width: 29px;
+    height: 16px;
+    /* display: inline-block; */
+    position: absolute;
+    /* float: left; */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 39px;
+    border: none;
+}
+.bottom-area .btn-search{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    float: right;
+    border: 0;
+    background-position: -32px -97px;
+    background-color: transparent;
+
+}
+.bottom-area .select-area{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 21px;
+}
+.bottom-area .select-area select{
+    float: left;
+    width: 80px;
+    height: 21px;
+    border-color: #afcfea;
+    color: #1E6CB3;
+    font-size: 12px;
+    padding: 0 0 0 2px;
+    box-sizing: border-box;
+    line-height: 21px;
+}
+.bottom-area .select-area .select-btn{
+    /* float: left; */
+    width: 30px;
+    font-size: 11px;
+    color: #fff;
+    background-color: #1E6CB3;
+    border: 0;
+    height: 21px;
+    /* margin-left: -1px; */
+    display: inline-block;
+    padding: 0;
+}
+
+
+.bottom-area .sun{
+    float: left;
+}
+.bottom-area .info-weather {
+    float: left;
+}
+.bottom-area .info-weather>a{
+    display: block;
+}
+.bottom-area .tem1 em:first-child{
+    font-size: 25px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+.bottom-area .tem1 em{
+    font-size: 16px;
+    letter-spacing: -0.1em;
+}
+.bottom-area .tem2{
+    margin-top: 7px;
+}
+.bottom-area .tem2 span{
+    margin-top: 7px;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+
+
+footer .footer-link{
+    /* margin-top: 20px; */
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+footer .info-area{
+    /* padding: 15px 0; */
+}
+footer .info-area .info-item{
+    position: relative;
+    float: left;
+    padding: 15px 10px;
+    font-size: 12px;
+    color: #636363;
+}
+footer .info-area .info-item+.info-item::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 14px;
+    margin-top: -6px;
+    background: #dcdcdc;
+}
+footer .info-area .info-iteam:nth-child(2){
+    color: #000;
+    font-weight: bold;
+}
+footer .sns-link{
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding: 22px 0;
+    border-top: 1px solid #ccc; */
+}
+
+
+footer .link-sns{
+    /* padding: 22px 0; */
+    /* border-bottom: 1px solid #ccc; */
+}
+
+footer .sns-link .sns-item{
+    float: left;
+}
+footer .sns-link .sns-item+.sns-item{
+    margin-left: 12px;
+}
+.sns-link .link-sns{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+.sns-link .ic-insta{
+    background-position: -75px 0;
+}
+.sns-link .ic-facebook{
+    background-position: -25px 0;
+}
+.sns-link .ic-twitter{
+    background-position: -50px 0;
+}
+.sns-link .ic-blog{
+    background-position: -150px 0;
+}
+.sns-link .ic-youtube{
+    background-position: -125px 0;
+}
+.sns-link .ic-kakao{
+    background-position: -100px 0;
+}
+
+
+.sns-item:hover .ic-insta{
+    background-position: -75px -25px;
+}
+.sns-item:hover .ic-facebook{
+    background-position: -25px -25px;
+}
+.sns-item:hover .ic-twitter{
+    background-position: -50px -25px;
+}
+.sns-item:hover .ic-blog{
+    background-position: -150px -25px;
+}
+.sns-item:hover .ic-youtube{
+    background-position: -125px -25px;
+}
+.sns-item:hover .ic-kakao{
+    background-position: -100px -25px;
+}
+
+
+.footer-box{
+    position: relative;
+    padding: 22px 0;
+    overflow: hidden;
+}
+.footer-box .footer-add{
+    margin-right: 40px;
+    float: left;
+    width: 108px;
+    height: 45px;
+
+    background-position: -180px 0;
+}
+
+.footer-box .addr-area{
+    display: inline-block;
+}
+.footer-box .addr-area p{
+    /* float: left; */
+    padding-bottom: 6px;
+    font-size: 12px;
+    color: #636363;
+}
+.footer-box .copy{
+    font-size: 11px;
+    /* display: inline-block; */
+
+}
+.footer-box .footer-mark{
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+
+.btn-top{
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    width: 50px;height: 50px;
+    background: #f00;
+    z-index: 20;
+    margin-left: 600px; /* 영역의 반 352의 반 */
+    background: url(../image/icon/icon_top.png) no-repeat;
+    /* transition: 1s; */
+    /* opacity: 1; */
+
+   /*  background: url(../image/icon/top.png) no-repeat; */ /* 파일자체가 안보이는건 왤까 */
+}
