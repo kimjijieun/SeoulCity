@@ -128,7 +128,7 @@ var slide3 = new Swiper(".sc-autoslide .swiper", {
         type: "fraction",
     },
     autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
     },
 });
@@ -172,12 +172,40 @@ $('.sc-autoslide .btn-play').click(function(e){
 
 
     // 
-    $('.sc-tab .tab-title').click(function(){
+    // $('.sc-tab .tab-title').click(function(){
 
-        $('.sc-tab ul').stop().slideUp(); //모두 닫는거
-        $(this).siblings('ul').stop().slideToggle();
+
+
+    //     $('.sc-tab ul').removeClass('active');
+    //     $('.sc-tab ul').stop().slideUp(); //모두 닫는거
+    //     $(this).toggleClass('active');
+    //     $(this).siblings('ul').stop().slideToggle();
         
-    })
+    //     // $('.sc-tab ul').stop().slideUp(); //모두 닫는거
+    //     // $(this).siblings('ul').stop().slideToggle();
+
+    // })
+
+    $('.sc-tab .tab-title').click(function(){
+        //탭버튼을 누를경우
+        if ($(this).hasClass('active')) {
+        //탭버튼이 이미 액티브, 즉 열려있을때는
+            $(this).removeClass('active');
+        //탭배경을 지운다
+            $(this).siblings('ul').slideUp();
+        //슬라이드도 닫는다
+        } else {
+        //탭버튼에 액티브가 없다, 즉 안열려 있을경우는
+            $('.sc-tab .tab-title').removeClass('active');
+        //모든 탭배경을 지운다(다른 탭버튼이 이미 배경이 있을수 있으니까)
+            $(this).addClass('active');
+        //누른 탭만 배경을 추가한다
+            $('.sc-tab ul').stop().slideUp();
+        //모든 슬라이드를 닫는다(다른 탭버튼이 액티브가 되서 슬라이드가 열려있을수 있으니까)
+            $(this).siblings('ul').slideDown();
+        //누른 탭버튼의 슬라이드는 다운
+        }
+    });
 //keyup은 누르고 뗄때 이벤트발생,연관검색어처럼 밑에 좌르륵 나올때
     $('.tab-area li:first-child a').keydown(function(e){
         var v_keyCode = e.keyCode || e.which;
@@ -197,6 +225,7 @@ $('.sc-autoslide .btn-play').click(function(e){
     })
 
 
+    // 클릭시 맨위로 올라감
     $('.btn-top').click(function(e){
         e.preventDefault();
         $('html, body').animate({

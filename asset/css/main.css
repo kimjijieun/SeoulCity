@@ -931,6 +931,10 @@
     float: left;
     width: calc(100% / 3);
 }
+/* 자바 */
+.sc-tab .tab-area .tab-title.active{
+    background: #d0d0d0;
+}
 .sc-tab button{
     border: none;
 }
@@ -960,20 +964,24 @@
 .sc-tab .tab-area span{
     position: relative;
 }
-.sc-tab .tab-area span::after{
+.sc-tab .tab-area .tab-title-arrow::after{
     content: '';
     position: absolute;
-    top: 50%;
+    top: 6px;
     right: -19px;
     height: 7px;
     width: 7px;
     border-style: solid;
     border-color: #373737;
     border-width: 0px 2px 2px 0px;
-    transform: translateY(-50%);
     transform: rotate(-135deg);
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform-origin: center center;
+}
+/* 자바 */
+.sc-tab .tab-title.active .tab-title-arrow::after{
+    top: 2px;
+    transform: rotate(45deg);
 }
 
 .sc-tab .tab-area ul{
