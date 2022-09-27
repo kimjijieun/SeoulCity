@@ -69,7 +69,9 @@
 }
 .sc-slide .slide-title .link-slide{
     display: block;
-    /* height: 100%; */ /* 왜 영역에서 넘치는지????? */
+    height: 100%; /* 왜 영역에서 넘치는지????? ->박스사이징 안해줌.. */
+    width: 100%;
+    box-sizing: border-box;
     padding-top: 50px;
 }
 .sc-slide .slide-img1{
