@@ -49,38 +49,19 @@
 
 
 
-/* .chk-wrap{
-    position: relative;
-    bottom: 8px;
-    right: 0px;
-    font-weight: 700;
-}
-.chk-wrap input{
-    position: absolute;
-    top: 0;left: 0;
-    visibility: hidden;
-}
-.chk-wrap label{
-    padding-left: 20px;
-    position: relative;
-}
-.chk-wrap label::before{
-    content: '';
-    position: absolute;
-    top: 0;left: 0;
-    width: 15px;height: 15px;
-    border: 1px solid #000;
-} */
 .chk-wrap{
     position: absolute;
-    bottom: 8px;
+    bottom: 5px;
+    width: 150px;
+    box-sizing: border-box;
     /* right: 382px; */
     right: 102px; 
     font-weight: 700;
 
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    /* gap: 8px; */
     background-color: rgba(0,0,0,0.5);
     border-radius: 6px;
     font-size: 12px;
@@ -99,20 +80,29 @@
 .chk-wrap label::before{
     content: '';
     position: absolute;
-    top: 50%;left: 0px;
+    top: 50%;left: 5px;
     transform: translateY(-50%);
-    width: 15px;height: 15px;
+    width: 10px;height: 10px;
     margin-left: 5px;
     background-color: #fff;
+    border: 1px solid #dddddd;
 }
 .chk-wrap label.active::before{
-    background: #f00; /* 체크박스를 꾸며주는거임 */
+    /* 체크박스를 꾸며주는거임 */
+    width: 10px;
+    height: 10px;
+    background: #fff url(../image/icon/icon_input_checked_m.png) no-repeat 50% 50%;
+    background-size: 10px auto;
+    margin-top: 1px;
+    border: 1px solid #767676;
+
 }
 .chk-wrap .btn-close{
-    width: 9px;
-    height: 9px;
-    background: url(../image/icon/btn_allmenu_close.png) no-repeat;
-    background-size: contain;
+    width: 24px;
+    height: 24px;
+    background: url(../image/icon/btn_allmenu_close.png) no-repeat center;
+    background-size: 9px auto;
+    /* background-size: contain; */
     background-color: transparent;
     border: none;
 }

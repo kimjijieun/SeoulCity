@@ -212,6 +212,7 @@ $('.sc-autoslide .btn-play').click(function(e){
 
         if(v_keyCode == 9 && e.shiftKey){
             $('.sc-tab ul').stop().slideUp();
+            $('.sc-tab .tab-title').removeClass('active');
         }
     })
 
@@ -220,6 +221,7 @@ $('.sc-autoslide .btn-play').click(function(e){
 
         if(v_keyCode == 9 && !e.shiftKey){
             $('.sc-tab ul').stop().slideUp();
+            $('.sc-tab .tab-title').removeClass('active');
         }
         // alert(153)
     })
