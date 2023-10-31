@@ -31,7 +31,6 @@
     left: -80px;
     text-align: center;
     background: #d2e1e9;
-
 }
 .slide1 .slide-title{}
 .slide2 .slide-title{
@@ -69,12 +68,14 @@
 }
 .sc-slide .slide-title .link-slide{
     display: block;
-    height: 100%; /* 왜 영역에서 넘치는지????? ->박스사이징 안해줌.. */
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding-top: 50px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
 }
-.sc-slide .slide-img1{
+.sc-slide .ic{
     width: 50px;
     height: 50px;
     display: block;
@@ -83,23 +84,16 @@
     background-position: 0 0;
     border-radius: 50%;
 }
-.sc-slide .slide-img2{
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: 0 auto 10px;
-    background-color: #fff;
-    background-position: -50px 0;
-    border-radius: 50%;
-}
+.sc-slide .slide1 .ic{}
+.sc-slide .slide2 .ic{background-position: -50px 0px;}
 .sc-slide .slide{
     height: 100%; /* 스와이퍼는 항상 높이 있어야함 */
 }
 
 
 /* !!!!!!!!!!!!!!!!!! */
-.contral-area{
-    display: flex;
+.sc-slide .contral-area{
+    /* display: flex;
     align-items: center;
     position: absolute;
     z-index: 2;
@@ -108,20 +102,40 @@
     right: 3px;
     bottom: 4px;
     color: #fff;
-    font-size: 13px;
+    font-size: 13px; */
     /* background: #f0f; */
+
+    position: absolute;
+    z-index: 10;
+    bottom: 4px;
+    right: 3px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    color: #fff;
+}
+.sc-slide .control-area:before {
+    content:"";
+    position: absolute;
+    top: 7px;
+    right: 68px;
+    width: 1px;
+    height: 18px;
+    background:rgba(255,255,255,.5);
 }
 
-.number{
-    padding: 10px;
-
-    /* position: absolute; */
-    /* top: 50%; */
+.sc-slide .number{
+    /* padding: 10px;
+    display: flex;
     bottom: auto;
     left: auto;
-    right: 80px;
-    /* transform: translateY(-50%); */
-    width: auto;
+    right: 111px;
+    width: auto; */
+    font-size: 13px; width:auto;
+}
+.sc-slide .control-area .btn{
+    width: 20px; 
+    height: 20px;
 }
 .prev{
     /* background: #f00; */
@@ -136,33 +150,43 @@
 /* .btn-play{padding: 10px;} */
 
 /* 시작할때 버튼이 정지로 나와있어야 함으로 active를 정지에 준거 */
-.btn-play a{display: none;}
-.btn-play a.active{display: block;}
+.btn-play button{display: none;}
+.btn-play button.active{display: block;}
+/* .btn-play a{display: none;}
+.btn-play a.active{display: block;} */
 .start{
     display: inline-block;
     width: 18px;
     height: 18px;
-    /* background-image: url(../image/icon/icon_set_common_2019.png); */
+    background-image: url(../image/icon/icon_set_common_2019.png);
     background-position: -269px -285px;
 }
 .pause{
     display: inline-block;
     width: 18px;
     height: 18px;
-    /* background-image: url(../image/icon/icon_set_common_2019.png); */
+    background-image: url(../image/icon/icon_set_common_2019.png);
     background-position: -285px -285px;
 }
 .next{
     display: inline-block;
     width: 18px;
     height: 18px;
-    /* background-image: url(../image/icon/icon_set_common_2019.png); */
+    background-image: url(../image/icon/icon_set_common_2019.png);
     background-position: -256px -285px;
 
     /* background: #f00; */
 }
 
-
+.sc-slide .number::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 66px;
+    width: 1px;
+    height: 24px;
+    background: rgba(255,255,255,.5);
+}
 
 
 /* 작동중일때 */
@@ -172,13 +196,13 @@
 .sc-slide .active .slide-title{
     background: #0158a8;
     color: #fff;
-    font-weight: bold;
 }
+.sc-slide .active strong{color: #fff;}
 
 
 
 
-.sc-slide .desc{
+figcaption{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -204,101 +228,91 @@
 .side-area{
     float: right;
     width: 360px;
-    /* background: #00f; */
-    height: 350px;
+    height: 204px;
 }
-.side-area .corona-box{
+.side-area .sc-seoulNews{margin-bottom: 10px;}
+.side-area .sc-seoulNews a{
+    display: block;
+    width: 100%;height: 100%;
+}
+.side-area .sc-seoulNews figure{
     width: 100%;
-    height: 214px;
-    background: url(../image/bg/bg_corona_pc_220330.gif) no-repeat;
-    margin-bottom: 7px;
+    height: 250px;
     position: relative;
 }
-.side-area .corona-live{
-    display: block;
+.side-area .sc-seoulNews figure img{
     width: 100%;
-    height: 129px;
-
+    height: 100%;
+    object-fit: cover;
 }
-.side-area .top-corona strong{
-    position: absolute;
-    top: 11px;
-    font-size: 12px;
-    font-weight: 700;
-    margin-left: 25px;
-    right: 20px;
-    letter-spacing: -0.05em;
-    height: 16px;
-
-}
-.side-area .corona-box span{
-    position: absolute;
-    left: 50%;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
+.side-area .sc-seoulNews figure figcaption{
+    padding: 0 10px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: -0.09em;
-    top: 99px;
-
-}
-.corona-info01{
-    margin-left: -104px;
-}
-.corona-info02{
-    margin-left: 42px;
+    letter-spacing: -0.035em;
+    text-align: center;
 }
 
-
-
-.corona-box .corona-report{
-    display: block;
-    width: 100%;
-    height: 85px;
-}
-.side-area .bott-corona{
+.side-area .sc-mayor{
+    background: url(../image/content/mayor_bg.png)no-repeat;
+    width: 360px;
+    height: 90px;
     position: relative;
-    letter-spacing: -0.05em;
 }
-.side-area .bott-corona span{
+.side-area .sc-mayor .link-mayor{
+    display: block;
+    height: 90px;
+}
+.side-area .sc-mayor .btn-mayor{
+    display: block;
     position: absolute;
-    top: 57px;
+    top: 18px;
+    right: 14px;
+    width: 110px;
+    height: 30px;
+    background: url(../image/content/mayor_btn.png)no-repeat;
 }
-.side-area .bott-corona strong{
+.side-area .link-wrap{
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     position: absolute;
-    top: 11px;
-    font-size: 12px;
-    font-weight: 700;
-    margin-left: 25px;
-    right: 20px;
-    letter-spacing: -0.05em;
-}
-.side-area .corona-info03{
-    margin-left: -148px;
-}
-.side-area .corona-info04{
-    margin-left: -65px;
-}
-.side-area .corona-info05{
-    margin-left: 17px;
-}
-.side-area .corona-info06{
-    margin-left: 105px;
-}
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 26px;
+    z-index: 1;
 
 
-
-/* .side-area .bott-corona strong{
-    position: absolute;
-    top: 11px;
-    font-size: 12px;
-    font-weight: 700;
-    margin-left: 25px;
-    right: 20px;
-    letter-spacing: -0.05em;
-} */
-
-
+}
+.side-area .link-wrap a{
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-justify-content: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    justify-content: center;
+    width: calc(25% - 1px);
+    height: 100%;
+}
+.side-area .sc-mayor .link-wrap .link-pledge{
+    background: #8B7153 url(../image/content/btn-mayorlink1.png) no-repeat center;
+}
+.side-area .sc-mayor .link-wrap .link-policy{
+    background: #8B7153 url(../image/content/btn-mayorlink2.png) no-repeat center;
+}
+.side-area .sc-mayor .link-wrap .link-vote{
+    background: #8B7153 url(../image/content/btn-mayorlink3.png) no-repeat center;
+}
+.side-area .sc-mayor .link-wrap .link-research{
+    background: #8B7153 url(../image/content/btn-mayorlink4.png) no-repeat center;
+}
 
 
 
@@ -315,7 +329,7 @@
 }
 .sc-service .service-list{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .sc-service .service-list .service-item{
     /* flex: 1; */
@@ -338,50 +352,56 @@
     margin: 0 auto 10px;
     box-sizing: border-box;
 }
-.sc-service .service-item .serv-ico01{
+.sc-service .service-item .ic-public{
     background-position: -360px 0;
 }
-.sc-service .service-item a:nth-child(2){
+/* .sc-service .service-item a:nth-child(2){
     width: 125px;
+} */
+.sc-service .service-item .ic-answer{
+    background-position: 0 0;
 }
-.sc-service .service-item .serv-ico03{
+.sc-service .service-item .ic-job{
     background-position: -120px 0;
 }
-.sc-service .service-item .serv-ico04{
+.sc-service .service-item .ic-info{
     background-position: -300px 0;
 }
-.sc-service .service-item .serv-ico05{
+.sc-service .service-item .ic-edu{
     background-position: -180px 0;
 }
-.sc-service .service-item .serv-ico06{
+.sc-service .service-item .ic-welfare{
     background-position: -960px 0;
 }
-.sc-service .service-item .serv-ico07{
+.sc-service .service-item .sic-residence{
     background-position: -780px 0;
 }
-.sc-service .service-item .serv-ico08{
+.sc-service .service-item .ic-youth{
     background-position: -1140px 0;
 }
-.sc-service .service-item .serv-ico09{
+.sc-service .service-item .ic-seoulHands{
     background-position: -1020px 0;
 }
-.sc-service .service-item .serv-ico10{
+.sc-service .service-item .ic-seoulImagine{
     background-position: -60px 0;
 }
-.sc-service .service-item .serv-ico11{
+.sc-service .service-item .ic-ebook{
+    background-position: -1080px 0;
+}
+.sc-service .service-item .ic-council{
     background-position: -600px 0;
 }
 .sc-service .link-total{
     position: absolute;
     top: 50px;
-    right: 0;
+    left: 140px;
     width: 112px;
     height: 29px;
     padding-left: 13px;
     border: 1px solid #ddd;
     box-sizing: border-box;
     font-size: 15px;
-    line-height: 29px;
+    line-height: 28px;
 }
 .sc-service .link-total::after{
     content: '';
@@ -465,8 +485,8 @@
     padding-top: 10px;
     font-size: 15px;
 }
+.inner1 .board-txt li{padding: 6px 0;}
 .inner1 .board-desc{
-    padding: 6px 0;
     position: relative;
     width: 100%;
     white-space: nowrap;
@@ -479,11 +499,13 @@
     margin: 0 9px 0 0;
 }
 .inner1 .e-cul{color: #9b64d3;}
+.inner1 .e-wel{color: #d76000;}
 .inner1 .e-eco{color: #069363;}
 .inner1 .e-env{color: #599100;}
 .inner1 .e-hom{color: #c35c3c;}
+.inner1 .e-work{color: #028ab6;}
 
- .sc-event .sc-titles{
+.sc-event .sc-titles{
     margin-top: 0;
 }
 .inner1 .link-more{
@@ -507,6 +529,7 @@
     padding: 17px 5px 7px 20px;
     background: #eff4f8;
     overflow: hidden;
+    font-size: 15px;
 }
 .sc-often .often-list .often-item{
     float: left;
@@ -573,10 +596,10 @@
 .sc-data .safty{
     background: url(../image/icon/icon_safty.png) no-repeat;
 }
-.sc-data .item07{
+.sc-data .culture{
     background: url(../image/icon/icon_culture.png) no-repeat;
 }
-.sc-data .item08{
+.sc-data .home{
     background: url(../image/icon/icon_work.png) no-repeat;
 }
 
@@ -618,16 +641,19 @@
 }
 
 
-.sc-new .new-item .item-title01{
-    background-color: #599100;
-}
-.sc-new .new-item .item-title02{
-    background-color: #9b64d3;
-}
-.sc-new .new-item .item-title03{
+.sc-new .new-item .item-work{
     background-color: #028ab6;
 }
-.sc-new .new-item .item-title04{
+.sc-new .new-item .item-traffic{
+    background-color: #337ee2;
+}
+.sc-new .new-item .item-safty{
+    background-color: #e44869;
+}
+.sc-new .new-item .item-env{
+    background-color: #599100;
+}
+.sc-new .new-item .item-wel{
     background-color: #d76000;
 }
 
@@ -659,13 +685,13 @@
     color: #222;
     word-break: keep-all;
 }
-.sc-new .total-more{
+.sc-new .link-more{
     width: 75px;
     position: absolute;
     right: 0;
     top: 36px;
 }
-.sc-new .total-more a{
+.sc-new .link-more a{
     background-position: 0 -259px;
     font-size: 15px;
     color: #7d7d7d;
@@ -674,22 +700,22 @@
 }
 
 /* .seoul-area{width: 780px;} */
-.inner2{
+.media-area{
     display: flex;
     padding-bottom: 50px;
     border-bottom: 2px solid #222;
 }
-.inner2 .seoul-vidio{
+.media-area .seoul-vidio{
     /* float: left; */
     /* height: 152px; */
     position: relative;
 }
-.inner2 .seoul-vidio a{
+.media-area .seoul-vidio a{
     display: block;
     height: 100%;
 }
 
-.inner2 .seoul-vidio .img-box01{
+.media-area .seoul-vidio .img-box01{
     width: 280px;
     /* overflow: hidden; */
     position: relative;
@@ -730,7 +756,7 @@
     width: 480px;
     margin: 0 0 0 20px;
     /* float: left; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .seoul-news .news-txt{
@@ -775,14 +801,19 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: url(../image/content/sns.gif);
+    background: url(../image/content/sns.gif)no-repeat 0 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
 }
 .seoul-sns .sc-title{
     position: relative;
-    padding: 10px 15px;
+    font-size: 22px;
+    color: #222;
+    font-weight: 700;
+    line-height: 1.2;
     /* left: 30px; */
 }
-.seoul-sns .seoul-box .sc-title::after{
+/* .seoul-sns .seoul-box .sc-title::after{
     content: '';
     position: absolute;
     left: 136px;
@@ -790,7 +821,7 @@
     height: 24px;
     background-position: -247px 0;
     border-left: 1px solid #878787;
-}
+} */
 .seoul-sns .sns-list{
     display: flex;
     justify-content: space-between;
@@ -798,7 +829,7 @@
     top: 90px;
     left: 50%;
     transform: translateX(-50%);
-    width: 276px;
+    width: 303px;
     height: 40px;
     /* margin: 0 auto; */
 }
@@ -824,6 +855,20 @@
 }
 .seoul-sns .sns-list .ic-kakao{
     background-position: -200px 0;
+}
+.seoul-sns .sns-list .ic-kakaoChannel{
+    background-position: -240px 0;
+}
+.seoul-sns .link-more{
+    font-size: 15px;
+    color: #7d7d7d;
+    display: inline-block;
+    width: 70px;
+    background-position: -5px -258px;
+    top: 15px;
+    right: 15px;
+    font-weight: 600;
+    position: absolute;
 }
 
 

@@ -35,14 +35,6 @@ body {
 ol, ul {
 	list-style: none;
 }
-/* blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-} */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -56,6 +48,11 @@ img{
 	vertical-align: top;
 }
 
-/* button,input{
-    -webkit-appearance: none; 
-    border: 0; } */
+button,input,select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	border: none;
+	font-family: inherit;
+	background: transparent;
+}

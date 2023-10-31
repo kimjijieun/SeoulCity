@@ -1,8 +1,16 @@
 body{
     font-size: 14px;
     font-family: 'Nanum Gothic', sans-serif;
+    line-height: 1.35em;
+	letter-spacing: -0.05em;
     color: #222;
-    letter-spacing: -0.05em;
+}
+.wrapper{
+    position: relative;
+    min-width: 1152px;
+}
+*:focus{
+    outline: 3px dotted #ff0000;
 }
 
 .blind{
@@ -19,6 +27,7 @@ body{
     width: 1152px;
 }
 
+
 .top-area .logo,
 .bottom-area .btn-search,
 .slide-list .btn-area .prev,
@@ -33,17 +42,18 @@ body{
 .start,
 .pause,
 .next,
-.sc-new .total-more a,
-.inner1 .link-more
+.sc-new .link-more a,
+.inner1 .link-more,
+.seoul-sns .link-more
 {
-    background-image: url(../image/icon/icon_set_common_2019.png);
+    background-image: url(../image/icon/icon_set_common.png);
     background-repeat: no-repeat;
     /* background-size: ; */
 }
 
 .slide-wrap .ic-slide,
-.sc-slide .slide-img1,
-.sc-slide .slide-img2
+.sc-slide .ic,
+.sc-slide .slide2 .ic
 {
     background-image: url(../image/icon/icon_main_2019.png);
     background-repeat: no-repeat;
@@ -54,7 +64,6 @@ body{
     background-repeat: no-repeat;
 }
 
-.seoul-sns .seoul-box .sc-title::after,
 .seoul-sns .sns-list .ic-insta,
 .seoul-sns .sns-list .ic-facebook,
 .seoul-sns .sns-list .ic-twitter,
@@ -72,15 +81,18 @@ body{
 .sns-link .ic-twitter,
 .sns-link .ic-blog,
 .sns-link .ic-youtube,
-.sns-link .ic-kakao{
-    background: url(../image/icon/icon_set_sns.png);
+.sns-link .ic-kakao,
+.sns-list .ic-kakaoChannel{
+    background: url(../image/icon/ico_sns_list_202205.png);
     background-repeat: no-repeat;
 }
 
 .sc-autoslide .prev,
 .sc-autoslide .start,
 .sc-autoslide .pause,
-.sc-autoslide .next
+.sc-autoslide .next,
+.sc-slide .control-area .autoplay,
+.sc-slide .control-area .autoplay.active
 {
     background: url(../image/icon/icon_set_common.png);
     background-repeat: no-repeat;

@@ -4,42 +4,42 @@
 @import url(./reset.css);
 @import url(./common.css);
 
-
-/* .ad-box{
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    height: 91px;
-} */
-/* .ad{
+#skip-nav{
+    position: absolute;
     width: 100%;
-    height: 100%;
-    display: block;
+    z-index: 999;
+    top: 0;left: 0;
 }
-.ad img{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.ad .ad-ck{
-    position: absolute;
-    right: 103px;
-    bottom: 0;
 
-    width: 150px;
-    padding: 3px 2px 5px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 6px;
-    overflow: hidden;
+#skip-nav a{
+    display: block;
+    height: 40px;   
+    line-height: 40px;
+    transform: translateY(-100%);
+    text-align: center;
+    font-size: 1.15em;
+    background: #333333;
     color: #fff;
-} */
+
+}
+
+#skip-nav a:focus,
+#skip-nav a:active {
+    transform: translateY(0);
+    outline: 3px dotted #ff0000;
+    margin: 2px;
+}
+
+
+
+
+
 .ad-box{
-    overflow: hidden;
     position: relative;
     height: 90px;
 }
 .ad-box img{
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -51,11 +51,11 @@
 
 .chk-wrap{
     position: absolute;
+    right: 50%;
     bottom: 5px;
     width: 150px;
+    margin-right: -576px;
     box-sizing: border-box;
-    /* right: 382px; */
-    right: 102px; 
     font-weight: 700;
 
     display: flex;
@@ -70,6 +70,7 @@
 }
 .chk-wrap input{
     position: absolute;
+    width: 0;height: 0;
     top: 50%;left: 0;
     transform: translateY(-50%);
     visibility: hidden;
@@ -110,7 +111,6 @@
 /* header */
 .top-area{margin-top: -1px;}
 .top-area .common-inner{
-    overflow: hidden;
     height: 48px;
     line-height: 48px;
 }
@@ -135,72 +135,63 @@
     font-weight: 700;
     
 }
-.top-area .gnb-area .gnb-list{
-
-}
 .top-area .gnb-area .gnb-item{float: left;}
 .top-area .gnb-area .gnb-item+.gnb-item{
     margin-left: 20px;
 }
 .top-area .gnb-area .gnb-item:hover{color: #2292e9;}
 
-.top-area .login-list{
+.top-area .login-area{
     float: right;
     font-weight: bold;
 }
-.top-area .login-item{
+.top-area .login-area a{
     float: left;
-    display: inline-block;
     font-size: 14px;
     padding: 0 10px;
 }
-.top-area .gnb-area .login-item+.login-item{
-    float: left;
-}
-.top-area .gnb-area .login-item:hover{color: #2292e9;}
+.top-area .login-area a:hover{color: #2292e9;}
 
 
 
-.bottom-area .common-inner{
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
+.bottom-area .common-inner{position: relative;}
+.bottom-area .common-inner::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .bottom-area .logo{
-    background: url(../image/logo/logo_new_2019.png) no-repeat;
-
-    margin: 38px 0 30px;
+    background: url(../image/logo/seoul-slogan.png) no-repeat;
     float: left;
-    width: 178px;
+    width: 133px;
     height: 51px;
+    margin: 38px 0 30px;
 }
-.bottom-area .logo a{ /* 왜 100% 안됨? 그래야 전체를 클릭할수있는거아닌가 */
-    /* width: 100%; */
-    width: 178px;
+.bottom-area .logo a{
+    width: 133px;
     height: 51px;
+    display: block;
 }
 
 .bottom-area .search-area{
-    width: 460px;
+    width: 520px;
     height: 42px;
     border: 3px solid #2292e9;
-    /* position: absolute;
+    position: absolute;
     left: 50%;
-    top: 40px; */
-    position: relative;
+    top: 40px;
+    margin-left: -326px;
     margin-top: 0;
     box-sizing: border-box;
 }
 .bottom-area .search-area .input-search{
     float: left;
-    width: calc(100% - 46px);
+    width: calc(100% - 42px);
     border: 0;
     padding: 0 10px;
-    height: 36px;
-    line-height: 36px;
-    
+    height: 38px;
+    line-height: 38px;
+    background: transparent;
     box-sizing: border-box;
 }
 .bottom-area .search-area input::placeholder{
@@ -252,6 +243,9 @@
     padding: 0 0 0 2px;
     box-sizing: border-box;
     line-height: 21px;
+    border-radius: 0;
+    background: url(../image/icon/bg_select_arrow_m.png) no-repeat 96% center;
+    background-size:8px auto;
 }
 .bottom-area .select-area .select-btn{
     /* float: left; */
@@ -267,11 +261,18 @@
 }
 
 
-.bottom-area .sun{
-    float: left;
+.bottom-area .weather-area{
+    width: 270px;
+    height: 85px;
+    float: right;
+    margin-top: 34px;
 }
+.bottom-area .weather-area .weather-box{float: left;}
 .bottom-area .info-weather {
-    float: left;
+    max-width: 242px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 .bottom-area .info-weather>a{
     display: block;
@@ -286,13 +287,15 @@
     letter-spacing: -0.1em;
 }
 .bottom-area .tem2{
-    margin-top: 7px;
-}
-.bottom-area .tem2 span{
-    margin-top: 7px;
     font-size: 13px;
     letter-spacing: -1px;
+    margin-top: 7px;
 }
+.bottom-area .tem2 .state{
+    margin: 0 5px 0 2px;
+    font-size: 14px;
+}
+.bottom-area .tem2 .fine{ color: #0068b7; }
 
 
 
