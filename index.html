@@ -203,7 +203,6 @@
                                     </li>
                                 </ul>
                                 <div class="contral-area">
-                                    <!-- <div class="swiper-pagination number"></div> -->
                                     <div class="number"></div>
                                     <button class="btn prev"><span class="blind">이전</span></button>
                                     <div class="btn-play">
@@ -344,11 +343,9 @@
             <!--  -->
             <div class="common-inner">
                 <div class="inner1">
-                    <!-- 의미 없이 묶어줄라고 쓰는거 -->
                     <section class="sc-event">
                         <h2 class="sc-title">이벤트 신청</h2>
                         <ul class="board-txt">
-                            <!-- ul li가 더 좋음 -->
                             <li>
                                 <a href="" class="board-desc">
                                     <em class="e-cul">문화</em>
@@ -441,7 +438,7 @@
                 <section class="sc-data">
                     <h2 class="sc-title">분양별정보</h2>
                     <ul class="data-list">
-                        <li class="data-item home"><a href="">주택</a></li><!-- 클래스 정확한 이름 -->
+                        <li class="data-item home"><a href="">주택</a></li>
                         <li class="data-item economy"><a href="">경재</a></li>
                         <li class="data-item traffic"><a href="">교통</a></li>
                         <li class="data-item environment"><a href="">환경</a></li>
@@ -543,7 +540,6 @@
                     </ul>
                 </section>
                 <article class="media-area">
-                    <!-- 3개를 묶어주는게 좋을듯 -->
                     <section class="seoul-vidio">
                         <h2 class="sc-title">서울영상</h2>
                         <a href="">
@@ -577,15 +573,14 @@
                     <div class="seoul-sns">
                         <a href="" class="seoul-box" title="새창열림">
                             <h2 class="sc-title">서울시 SNS</h2>
-                            <!-- <h3 class="blind">title은 내 내용이외의 부수적인 정보제공</h3> ??? -->
-                        </a> <!-- 블라인드 처리 외에,이미지설명이외에 마우스에 호버할시 설명 추가 -->
+                        </a>
                         <ul class="sns-list">
                             <li class="sns-item">
                                 <a href="" class="link-sns ic-facebook"><span class="blind">페이스북</span></a>
                             </li>
                             <li class="sns-item">
                                 <a href="" class="link-sns ic-insta"><span class="blind">인스타그램</span></a>
-                            </li> <!-- 이렇게 수정 -->
+                            </li>
                             <li class="sns-item">
                                 <a href="" class="link-sns ic-youtube"><span class="blind">유튜브</span></a>
                             </li>
@@ -606,7 +601,6 @@
                     </div>
                 </article>
                 <section class="sc-autoslide">
-                    <!-- banner-slide -->
                     <h3 class="blind">광고 슬라이드</h3>
                     <div class="swiper">
                         <div class="swiper-wrapper">
@@ -630,114 +624,138 @@
                             </div>
                         </div>
                         <div class="contral-area">
-                            <div class="number">
-                                <!-- <span class="curr">2</span>/<span class="total">5</span> -->
-                            </div>
-                            <a href="" class="prev btn"><span class="blind">이전</span></a>
+                            <div class="number"></div>
+
+                            <button class="btn prev"><span class="blind">이전</span></button>
                             <div class="btn-play btn">
-                                <a href="" class="start"><span class="blind">재생</span></a>
-                                <a href="" class="pause active"><span class="blind">정지</span></a>
+                                <button class="start"><span class="blind">재생</span></button>
+                                <button class="pause active"><span class="blind">정지</span></button>
                             </div>
-                            <a href="" class="next btn"><span class="blind">다음</span></a>
+                            <button class="btn next"><span class="blind">다음</span></button>
+
                         </div>
                     </div>
                 </section>
-                <section class="sc-tab">
+                <section class="sc-related">
                     <h2 class="blind">바로가기 링크모음</h2>
-                    <!-- ul>li>ul>li로 가주자 -->
                     <div class="tab-area">
-                        <!-- 묶어놔야 화살표가 딱맞음 -->
                         <button class="tab-title"><span class="tab-title-arrow">직속기관·사업소</span></button>
-                        <ul>
-                            <!-- ul li들은 이름 정확하게 주기 -->
-                            <li><a href="">서울시립대학교</a></li>
-                            <li><a href="">보건환경연구원</a></li>
-                            <li><a href="">인재개발원</a></li>
-                            <li><a href="">농업기술센터</a></li>
-                            <li><a href="">서울종합방재센터</a></li>
-                            <li><a href="">119특수구조단</a></li>
-                            <li><a href="">소방학교</a></li>
-                            <li><a href="">상수도사업본부</a></li>
-                            <li><a href="">한강사업본부</a></li>
-                            <li><a href="">물재생센터</a></li>
-                            <li><a href="">서북병원어린이병원</a></li>
-                            <li><a href="">은평병원</a></li>
-                            <li><a href="">서울역사박물관</a></li>
-                            <li><a href="">한성백제박물관</a></li>
-                            <li><a href="">시립미술관</a></li>
-                            <li><a href="">체육시설관리사업소</a></li>
-                            <li><a href="">서울도서관</a></li>
-                            <li><a href="">서울역사편찬원</a></li>
-                            <li><a href="">품질시험소</a></li>
-                            <li><a href="">서울대공원</a></li>
-                            <li><a href="">동부공원녹지사업소</a></li>
-                            <li><a href="">서울시립과학관</a></li>
-                            <li><a href="">서울식물원</a></li>
-                            <li><a href="">서울기록원</a></li>
-                            <li><a href="">아동복지센터</a></li>
+                        <ul class="sub-list">
+                            <li class="sub-item"><a href="">서울시립대학교</a></li>
+                            <li class="sub-item"><a href="">보건환경연구원</a></li>
+                            <li class="sub-item"><a href="">인재개발원</a></li>
+                            <li class="sub-item"><a href="">농업기술센터</a></li>
+                            <li class="sub-item"><a href="">서울종합방재센터</a></li>
+                            <li class="sub-item"><a href="">119특수구조단</a></li>
+                            <li class="sub-item"><a href="">소방학교</a></li>
+                            <li class="sub-item"><a href="">상수도사업본부</a></li>
+                            <li class="sub-item"><a href="">한강사업본부</a></li>
+                            <li class="sub-item"><a href="">물재생센터</a></li>
+                            <li class="sub-item"><a href="">서북병원어린이병원</a></li>
+                            <li class="sub-item"><a href="">은평병원</a></li>
+                            <li class="sub-item"><a href="">서울역사박물관</a></li>
+                            <li class="sub-item"><a href="">한성백제박물관</a></li>
+                            <li class="sub-item"><a href="">시립미술관</a></li>
+                            <li class="sub-item"><a href="">체육시설관리사업소</a></li>
+                            <li class="sub-item"><a href="">서울도서관</a></li>
+                            <li class="sub-item"><a href="">서울역사편찬원</a></li>
+                            <li class="sub-item"><a href="">품질시험소</a></li>
+                            <li class="sub-item"><a href="">서울대공원</a></li>
+                            <li class="sub-item"><a href="">동부공원녹지사업소</a></li>
+                            <li class="sub-item"><a href="">서울시립과학관</a></li>
+                            <li class="sub-item"><a href="">서울식물원</a></li>
+                            <li class="sub-item"><a href="">서울기록원</a></li>
+                            <li class="sub-item"><a href="">아동복지센터</a></li>
+                            <li class="sub-item"><a href="">서울공예박물관</a></li>
                         </ul>
         
                     </div>
                     <div class="tab-area">
                         <button class="tab-title"><span class="tab-title-arrow">공사·출연기관</span></button>
-                        <ul>
-                            <li><a href="">서울교통공사</a></li>
-                            <li><a href="">서울시설공단</a></li>
-                            <li><a href="">서울특별시 농수산식품공사</a></li>
-                            <li><a href="">서울주택도시공사</a></li>
-                            <li><a href="">서울에너지공사</a></li>
-                            <li><a href="">서울물재생시설공단</a></li>
-                            <li><a href="">서울의료원</a></li>
-                            <li><a href="">서울연구원</a></li>
-                            <li><a href="">서울산업진흥원</a></li>
-                            <li><a href="">서울신용보증재단</a></li>
-                            <li><a href="">세종문화회관</a></li>
-                            <li><a href="">서울특별시 여성가족재단</a></li>
-                            <li><a href="">서울시복지재단</a></li>
-                            <li><a href="">서울문화재단</a></li>
-                            <li><a href="">서울시립교향악단</a></li>
-                            <li><a href="">서울디자인재단</a></li>
-                            <li><a href="">서울장학재단</a></li>
-                            <li><a href="">서울특별시 평생교육진흥원</a></li>
-                            <li><a href="">서울관광재단</a></li>
-                            <li><a href="">서울특별시 50플러스재단</a></li>
-                            <li><a href=""> 서울디지털재단</a></li>
-                            <li><a href=""> 서울특별시 120다산콜재단</a></li>
-                            <li><a href=""> 서울특별시 공공보건의료재단</a></li>
-                            <li><a href=""> 서울기술연구원</a></li>
-                            <li><a href=""> 서울시 사회서비스원</a></li>
-                            <li><a href=""> 서울시미디어재단TBS</a></li>
+                        <ul class="sub-list">
+                            <li class="sub-item"><a href="">서울교통공사</a></li>
+                            <li class="sub-item"><a href="">서울시설공단</a></li>
+                            <li class="sub-item"><a href="">서울특별시 농수산식품공사</a></li>
+                            <li class="sub-item"><a href="">서울주택도시공사</a></li>
+                            <li class="sub-item"><a href="">서울에너지공사</a></li>
+                            <li class="sub-item"><a href="">서울물재생시설공단</a></li>
+                            <li class="sub-item"><a href="">서울의료원</a></li>
+                            <li class="sub-item"><a href="">서울연구원</a></li>
+                            <li class="sub-item"><a href="">서울산업진흥원</a></li>
+                            <li class="sub-item"><a href="">서울신용보증재단</a></li>
+                            <li class="sub-item"><a href="">세종문화회관</a></li>
+                            <li class="sub-item"><a href="">서울특별시 여성가족재단</a></li>
+                            <li class="sub-item"><a href="">서울시복지재단</a></li>
+                            <li class="sub-item"><a href="">서울문화재단</a></li>
+                            <li class="sub-item"><a href="">서울시립교향악단</a></li>
+                            <li class="sub-item"><a href="">서울디자인재단</a></li>
+                            <li class="sub-item"><a href="">서울장학재단</a></li>
+                            <li class="sub-item"><a href="">서울특별시 평생교육진흥원</a></li>
+                            <li class="sub-item"><a href="">서울관광재단</a></li>
+                            <li class="sub-item"><a href="">서울특별시 50플러스재단</a></li>
+                            <li class="sub-item"><a href=""> 서울디지털재단</a></li>
+                            <li class="sub-item"><a href=""> 서울특별시 120다산콜재단</a></li>
+                            <li class="sub-item"><a href=""> 서울특별시 공공보건의료재단</a></li>
+                            <li class="sub-item"><a href=""> 서울기술연구원</a></li>
+                            <li class="sub-item"><a href=""> 서울시 사회서비스원</a></li>
+                            <li class="sub-item"><a href=""> 서울시미디어재단TBS</a></li>
                         </ul>
         
                     </div>
                     <div class="tab-area">
                         <button class="tab-title"><span class="tab-title-arrow">자치구</span></button>
-                        <ul>
-                            <li><a href="">강남구</a></li>
-                            <li><a href="">강동구</a></li>
-                            <li><a href="">강북구</a></li>
-                            <li><a href="">강서구</a></li>
-                            <li><a href="">관악구</a></li>
-                            <li><a href="">광진구</a></li>
-                            <li><a href="">구로구</a></li>
-                            <li><a href="">금천구</a></li>
-                            <li><a href="">노원구</a></li>
-                            <li><a href="">도봉구</a></li>
-                            <li><a href="">동대문구</a></li>
-                            <li><a href="">동작구</a></li>
-                            <li><a href="">마포구</a></li>
-                            <li><a href="">서대문구</a></li>
-                            <li><a href="">서초구</a></li>
-                            <li><a href="">성동구</a></li>
-                            <li><a href="">성북구</a></li>
-                            <li><a href="">송파구</a></li>
-                            <li><a href="">양천구</a></li>
-                            <li><a href="">영등포구</a></li>
-                            <li><a href="">용산구</a></li>
-                            <li><a href="">은평구</a></li>
-                            <li><a href="">종로구</a></li>
-                            <li><a href="">중구</a></li>
-                            <li><a href="">중랑구</a></li>
+                        <ul class="sub-list">
+                            <li class="sub-item"><a href="">강남구</a></li>
+                            <li class="sub-item"><a href="">강동구</a></li>
+                            <li class="sub-item"><a href="">강북구</a></li>
+                            <li class="sub-item"><a href="">강서구</a></li>
+                            <li class="sub-item"><a href="">관악구</a></li>
+                            <li class="sub-item"><a href="">광진구</a></li>
+                            <li class="sub-item"><a href="">구로구</a></li>
+                            <li class="sub-item"><a href="">금천구</a></li>
+                            <li class="sub-item"><a href="">노원구</a></li>
+                            <li class="sub-item"><a href="">도봉구</a></li>
+                            <li class="sub-item"><a href="">동대문구</a></li>
+                            <li class="sub-item"><a href="">동작구</a></li>
+                            <li class="sub-item"><a href="">마포구</a></li>
+                            <li class="sub-item"><a href="">서대문구</a></li>
+                            <li class="sub-item"><a href="">서초구</a></li>
+                            <li class="sub-item"><a href="">성동구</a></li>
+                            <li class="sub-item"><a href="">성북구</a></li>
+                            <li class="sub-item"><a href="">송파구</a></li>
+                            <li class="sub-item"><a href="">양천구</a></li>
+                            <li class="sub-item"><a href="">영등포구</a></li>
+                            <li class="sub-item"><a href="">용산구</a></li>
+                            <li class="sub-item"><a href="">은평구</a></li>
+                            <li class="sub-item"><a href="">종로구</a></li>
+                            <li class="sub-item"><a href="">중구</a></li>
+                            <li class="sub-item"><a href="">중랑구</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-area">
+                        <button class="tab-title not"><span class="tab-title-arrow">중앙행정기관</span></button>
+                    </div>
+                    <div class="tab-area">
+                        <button class="tab-title"><span class="tab-title-arrow">지방자치단체·유관기관</span></button>
+                        <ul class="sub-list">
+                            제주특별자치도
+                            <li class="sub-item"><a href="">서울특별시</a></li>
+                            <li class="sub-item"><a href="">부산광역시</a></li>
+                            <li class="sub-item"><a href="">대구광역시</a></li>
+                            <li class="sub-item"><a href="">인천광역시</a></li>
+                            <li class="sub-item"><a href="">광주광역시</a></li>
+                            <li class="sub-item"><a href="">대전광역시</a></li>
+                            <li class="sub-item"><a href="">울산광역시</a></li>
+                            <li class="sub-item"><a href="">세종특별자치시</a></li>
+                            <li class="sub-item"><a href="">경기도</a></li>
+                            <li class="sub-item"><a href="">강원도</a></li>
+                            <li class="sub-item"><a href="">충청북도</a></li>
+                            <li class="sub-item"><a href="">충청남도</a></li>
+                            <li class="sub-item"><a href="">충청남도</a></li>
+                            <li class="sub-item"><a href="">전라북도</a></li>
+                            <li class="sub-item"><a href="">전라남도</a></li>
+                            <li class="sub-item"><a href="">경상북도</a></li>
+                            <li class="sub-item"><a href="">경상남도</a></li>
                         </ul>
                     </div>
                 </section>
@@ -749,26 +767,29 @@
             <div class="common-inner">
                 <div class="footer-link">
                     <ul class="info-area">
-                        <li class="info-item"><a href="" class="info-iteam">누리집 도우미</a></li>
-                        <li class="info-item"><a href="" class="info-iteam">개인정보처리방침</a></li>
-                        <li class="info-item"><a href="" class="info-iteam">저작권 정책</a></li>
-                        <li class="info-item"><a href="" class="info-iteam">영상정보처리기기 운영 관리방침</a></li>
-                        <li class="info-item"><a href="" class="info-iteam">누리집 바로잡기</a></li>
-                        <li class="info-item"><a href="" class="info-iteam">누리집지도</a></li>
+                        <li class="info-item"><a href="">누리집 도우미</a></li>
+                        <li class="info-item"><a href="">개인정보처리방침</a></li>
+                        <li class="info-item"><a href="">저작권 정책</a></li>
+                        <li class="info-item"><a href="">영상정보처리기기 운영 관리방침</a></li>
+                        <li class="info-item"><a href="">누리집 바로잡기</a></li>
+                        <li class="info-item"><a href="">누리집지도</a></li>
                     </ul>
                     <ul class="sns-link">
-                        <li class="sns-item"><a href="" class="link-sns ic-facebook"><span class="blind">페이스북</span></a></li> <!-- 클래스 하나하나 주기 ic- -->
-                        <li class="sns-item"><a href="" class="link-sns ic-twitter"><span class="blind">트위터</span></a></li>
+                        <li class="sns-item"><a href="" class="link-sns ic-facebook"><span class="blind">페이스북</span></a></li>
                         <li class="sns-item"><a href="" class="link-sns ic-insta"><span class="blind">인스타그램</span></a></li>
-                        <li class="sns-item"><a href="" class="link-sns ic-kakao"><span class="blind">카카오페이지</span></a></li>
                         <li class="sns-item"><a href="" class="link-sns ic-youtube"><span class="blind">유튜브</span></a></li>
-                        <li class="sns-item"><a href="" class="link-sns ic-blog"><span class="blind">블로그</span></a></li>
+                        <li class="sns-item"><a href="" class="link-sns ic-twitter"><span class="blind">트위터</span></a></li>
+                        <li class="sns-item"><a href="" class="link-sns ic-blog"><span class="blind">카카오스토리</span></a></li>
+                        <li class="sns-item"><a href="" class="link-sns ic-kakao"><span class="blind">카카오스토리</span></a></li>
+                        <li class="sns-item"><a href="" class="link-sns ic-channel"><span class="blind">카카오톡채널</span></a></li>
+                        
+                        
                     </ul>
                 </div>
                 <div class="footer-box">
                     <div class="footer-add">
                         <figure>
-                            <figcaption class="blind">문의 120 정보를 못찾으셨나요? 120다산콜센터로 물어보세요!</span><!-- 적혀있는 정보는 다적어야함 -->
+                            <figcaption class="blind">문의 120 정보를 못찾으셨나요? 120다산콜센터로 물어보세요!
                             </figcaption>
                         </figure>
                     </div>
@@ -776,15 +797,15 @@
                         <p>서울특별시청 04524 서울특별시 중구 세종대로 110 [찾아오시는 길]</p>
                         <p>대표전화 : 02-120 또는 <a href="tel:010205">02-731-2120</a></p>
                         <!-- <a href="tel:10101010">02-731-2120</a> -->
+                        <p class="copy">© Seoul Metropolitan Government all rights reserved</p>
                     </address>
-                    <p class="copy">© Seoul Metropolitan Government all rights reserved</p>
                     <div class="footer-mark">
-                        <a href=""><img src="./asset/image/logo/footer_mark_isms-p.png" alt=""></a><!-- 블라인드처리 -->
+                        <a href=""><img src="./asset/image/logo/footer_mark_isms-p.png" alt=""></a>
                         <a href=""><img src="./asset/image/logo/footer_mark_wah.png" alt=""></a>
                     </div>
                 </div>
             </div>
-            <a href="" class="btn-top"><span class="blind">맨 위로</span></a>
+            <a href="" class="btn-top show"><span class="blind">맨 위로</span></a>
         </footer>
     </div>
 

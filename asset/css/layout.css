@@ -1,4 +1,3 @@
-/* 폰트먼저 리셋먼저 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
 @import url(./reset.css);
@@ -89,7 +88,7 @@
     border: 1px solid #dddddd;
 }
 .chk-wrap label.active::before{
-    /* 체크박스를 꾸며주는거임 */
+    /* 체크박스를 꾸밈 */
     width: 10px;
     height: 10px;
     background: #fff url(../image/icon/icon_input_checked_m.png) no-repeat 50% 50%;
@@ -207,9 +206,7 @@
     background: url(../image/icon/keyboard.png) no-repeat center;
     width: 29px;
     height: 16px;
-    /* display: inline-block; */
     position: absolute;
-    /* float: left; */
     top: 50%;
     transform: translateY(-50%);
     right: 39px;
@@ -220,7 +217,6 @@
     width: 36px;
     height: 36px;
     padding: 0;
-    float: right;
     border: 0;
     background-position: -32px -97px;
     background-color: transparent;
@@ -237,7 +233,7 @@
     float: left;
     width: 80px;
     height: 21px;
-    border-color: #afcfea;
+    border: 1px solid #afcfea;
     color: #1E6CB3;
     font-size: 12px;
     padding: 0 0 0 2px;
@@ -248,14 +244,12 @@
     background-size:8px auto;
 }
 .bottom-area .select-area .select-btn{
-    /* float: left; */
     width: 30px;
     font-size: 11px;
     color: #fff;
     background-color: #1E6CB3;
     border: 0;
     height: 21px;
-    /* margin-left: -1px; */
     display: inline-block;
     padding: 0;
 }
@@ -300,15 +294,11 @@
 
 
 footer .footer-link{
-    /* margin-top: 20px; */
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
 }
 
-footer .info-area{
-    /* padding: 15px 0; */
-}
 footer .info-area .info-item{
     position: relative;
     float: left;
@@ -316,6 +306,8 @@ footer .info-area .info-item{
     font-size: 12px;
     color: #636363;
 }
+footer .info-area .info-item:first-child{padding-left: 0;}
+footer .info-area .info-item:nth-child(2){font-weight: bold;}
 footer .info-area .info-item+.info-item::before{
     content: '';
     position: absolute;
@@ -336,14 +328,7 @@ footer .sns-link{
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    /* padding: 22px 0;
-    border-top: 1px solid #ccc; */
-}
-
-
-footer .link-sns{
-    /* padding: 22px 0; */
-    /* border-bottom: 1px solid #ccc; */
+    font-size: 0;
 }
 
 footer .sns-link .sns-item{
@@ -352,28 +337,56 @@ footer .sns-link .sns-item{
 footer .sns-link .sns-item+.sns-item{
     margin-left: 12px;
 }
-.sns-link .link-sns{
+.sns-link .link-sns::before{
+    content: '';
     display: inline-block;
     width: 24px;
     height: 24px;
+    background: url(../image/icon/icon_set_sns.png);
+    background-repeat: no-repeat;
 }
-.sns-link .ic-insta{
-    background-position: -75px 0;
+
+.sns-link .ic-facebook::before{ background-position: -25px 0; }
+.sns-link .ic-insta::before{background-position: -75px 0;}
+.sns-link .ic-youtube::before{background-position: -125px 0;}
+.sns-link .ic-twitter::before{background-position: -50px 0;}
+.sns-link .ic-blog::before{background-position: -150px 0;}
+.sns-link .ic-kakao::before{background-position: -100px 0;}
+.sns-link .ic-channel::before{background-position: -175px 0;}
+
+.sns-link .ic-facebook:hover::before{ background-position: -25px -25px; }
+.sns-link .ic-facebook:hover::before{ background-position: -25px -25px; }
+.sns-link .ic-insta:hover::before{background-position: -75px -25px;}
+.sns-link .ic-youtube:hover::before{background-position: -125px -25px;}
+.sns-link .ic-twitter:hover::before{background-position: -50px -25px;}
+.sns-link .ic-blog:hover::before{background-position: -150px -25px;}
+.sns-link .ic-kakao:hover::before{background-position: -100px -25px;}
+.sns-link .ic-channel:hover::before{background-position: -175px -25px;}
+
+
+.sns-link .link-sns:hover .ic-snsInsta{
+    background-position: -75px 25px;
 }
-.sns-link .ic-facebook{
-    background-position: -25px 0;
+.sns-link .link-sns:hover .ic-snsFacebook{
+    background-position: -25px -25px;
+
+    background: url(../image/icon/icon_set_sns.png);
+    background-repeat: no-repeat;
 }
-.sns-link .ic-twitter{
-    background-position: -50px 0;
+.sns-link .link-sns:hover .ic-snsTwitter{
+    background-position: -50px 25px;
 }
-.sns-link .ic-blog{
-    background-position: -150px 0;
+.sns-link .link-sns:hover .ic-snsBlog{
+    background-position: -150px 25px;
 }
-.sns-link .ic-youtube{
-    background-position: -125px 0;
+.sns-link .link-sns:hover .ic-snsYoutube{
+    background-position: -125px 25px;
 }
-.sns-link .ic-kakao{
-    background-position: -100px 0;
+.sns-link .link-sns:hover .ic-snsKakao{
+    background-position: -100px 25px;
+}
+.sns-link .link-sns:hover .ic-snsChannel{
+    background-position: -175px 25px;
 }
 
 
@@ -415,16 +428,12 @@ footer .sns-link .sns-item+.sns-item{
     display: inline-block;
 }
 .footer-box .addr-area p{
-    /* float: left; */
-    padding-bottom: 6px;
+    padding-bottom: 2px;
     font-size: 12px;
     color: #636363;
+    line-height: 1.35em;
 }
-.footer-box .copy{
-    font-size: 11px;
-    /* display: inline-block; */
-
-}
+.footer-box .copy{ font-size: 11px; }
 .footer-box .footer-mark{
     position: absolute;
     top: 20px;
@@ -434,15 +443,15 @@ footer .sns-link .sns-item+.sns-item{
 
 .btn-top{
     position: fixed;
-    bottom: 50px;
     left: 50%;
-    width: 50px;height: 50px;
-    background: #f00;
-    z-index: 20;
-    margin-left: 600px; /* 영역의 반 352의 반 */
+    bottom: -100px;
+    margin-left: 600px;
+    z-index: 30;
+    width: 34px;
+    height: 34px;
+    opacity: 0;
+    transition: bottom 1s, opacity 1s;
+    cursor: pointer;
     background: url(../image/icon/icon_top.png) no-repeat;
-    /* transition: 1s; */
-    /* opacity: 1; */
-
-   /*  background: url(../image/icon/top.png) no-repeat; */ /* 파일자체가 안보이는건 왤까 */
 }
+.btn-top.show{bottom: 98px; opacity: 1;}

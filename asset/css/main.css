@@ -1,5 +1,4 @@
 .inner0{
-    /* background: #f00; */
     overflow: hidden;
 }
 .sc-slide{
@@ -27,7 +26,7 @@
     height: 175px;
     position: absolute;
     top: 0;left: 0;
-    z-index: 2; /* 인덱스가 있어야 보임 */
+    z-index: 2;
     left: -80px;
     text-align: center;
     background: #d2e1e9;
@@ -35,7 +34,6 @@
 .slide1 .slide-title{}
 .slide2 .slide-title{
     top: 50%;
-    /* background: #d2e1e9; */
 }
 
 .slide1 .slide-title::after{
@@ -87,24 +85,12 @@
 .sc-slide .slide1 .ic{}
 .sc-slide .slide2 .ic{background-position: -50px 0px;}
 .sc-slide .slide{
-    height: 100%; /* 스와이퍼는 항상 높이 있어야함 */
+    height: 100%;
 }
 
 
 /* !!!!!!!!!!!!!!!!!! */
-.sc-slide .contral-area{
-    /* display: flex;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-    width: 110px;
-    height: 32px;
-    right: 3px;
-    bottom: 4px;
-    color: #fff;
-    font-size: 13px; */
-    /* background: #f0f; */
-
+.contral-area{
     position: absolute;
     z-index: 10;
     bottom: 4px;
@@ -124,36 +110,23 @@
     background:rgba(255,255,255,.5);
 }
 
-.sc-slide .number{
-    /* padding: 10px;
-    display: flex;
-    bottom: auto;
-    left: auto;
-    right: 111px;
-    width: auto; */
+.number{
     font-size: 13px; width:auto;
 }
-.sc-slide .control-area .btn{
+.control-area .btn{
     width: 20px; 
     height: 20px;
 }
 .prev{
-    /* background: #f00; */
     display: inline-block;
     width: 18px;
     height: 18px;
-    /* padding: 10px; */
-    /* background-position: -241px, -285px; */
-    /* background-image: url(../image/icon/icon_set_common_2019.png); */
-    background-position: -241px -285px;
-}
-/* .btn-play{padding: 10px;} */
 
-/* 시작할때 버튼이 정지로 나와있어야 함으로 active를 정지에 준거 */
+    background-position: -241px -285px;
+    margin-left: 25px;
+}
 .btn-play button{display: none;}
 .btn-play button.active{display: block;}
-/* .btn-play a{display: none;}
-.btn-play a.active{display: block;} */
 .start{
     display: inline-block;
     width: 18px;
@@ -166,7 +139,7 @@
     width: 18px;
     height: 18px;
     background-image: url(../image/icon/icon_set_common_2019.png);
-    background-position: -285px -285px;
+    background-position: -283px -285px;
 }
 .next{
     display: inline-block;
@@ -174,15 +147,13 @@
     height: 18px;
     background-image: url(../image/icon/icon_set_common_2019.png);
     background-position: -256px -285px;
-
-    /* background: #f00; */
 }
 
 .sc-slide .number::after{
     content: '';
     position: absolute;
     top: 4px;
-    right: 66px;
+    right: 62px;
     width: 1px;
     height: 24px;
     background: rgba(255,255,255,.5);
@@ -332,7 +303,6 @@ figcaption{
     justify-content: space-between;
 }
 .sc-service .service-list .service-item{
-    /* flex: 1; */
     width: auto;
     height: 90px;
     text-align: center;
@@ -355,9 +325,6 @@ figcaption{
 .sc-service .service-item .ic-public{
     background-position: -360px 0;
 }
-/* .sc-service .service-item a:nth-child(2){
-    width: 125px;
-} */
 .sc-service .service-item .ic-answer{
     background-position: 0 0;
 }
@@ -426,13 +393,6 @@ figcaption{
     width: 100%;
     padding: 20px 0;
 }
-/* .sc-corona1 .ad-img{
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    width: 288px;
-    padding: 20px 0;
-} */
 .sc-corona1 li:first-child .link-d::before{
     content: '';
     display: none;
@@ -447,16 +407,6 @@ figcaption{
     height: 60px;
     background: #dbdbdb;
 }
-/* .sc-corona1 .link-d+.link-d::before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0px;
-    width: 1px;
-    height: 60px;
-    background: #dbdbdb;
-} */
 
 
 .inner1{
@@ -477,7 +427,6 @@ figcaption{
 }
 .container .sc-title{
     font-size: 24px;
-    /* padding-bottom: 5px; */
     font-weight: 700;
 }
 .inner1 .board-txt{
@@ -551,8 +500,9 @@ figcaption{
 
 
 .common-inner .sc-title{
-    /* padding-top: 40px; */
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    line-height: 28px;
 }
 .sc-data{
     padding-top: 40px;
@@ -608,7 +558,6 @@ figcaption{
     position: relative;
 }
 .sc-new .new-list{
-    /* position: relative;*/
     overflow: hidden; 
 }
 .sc-new .new-item{
@@ -699,15 +648,12 @@ figcaption{
     width: 100%;
 }
 
-/* .seoul-area{width: 780px;} */
 .media-area{
     display: flex;
     padding-bottom: 50px;
     border-bottom: 2px solid #222;
 }
 .media-area .seoul-vidio{
-    /* float: left; */
-    /* height: 152px; */
     position: relative;
 }
 .media-area .seoul-vidio a{
@@ -717,19 +663,8 @@ figcaption{
 
 .media-area .seoul-vidio .img-box01{
     width: 280px;
-    /* overflow: hidden; */
     position: relative;
 }
-/* .sc-seoul .seoul-vidio img{
-    width: 100%;
-    height: 100%;
-    transform: scale(1.0);
-    transition: transform 0.3s ease-in-out;
-} */
-/* .sc-seoul .seoul-vidio a:hover{
-    transform: scale(2.0);
-} */
-
 
 .seoul-vidio .seoul-desc{
     color: #fff;
@@ -755,14 +690,11 @@ figcaption{
 .seoul-news{
     width: 480px;
     margin: 0 0 0 20px;
-    /* float: left; */
-    /* overflow: hidden; */
 }
 
 .seoul-news .news-txt{
     padding: 8px 0;
     width: 100%;
-    /* white-space: nowrap; */
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 16px;
@@ -811,17 +743,8 @@ figcaption{
     color: #222;
     font-weight: 700;
     line-height: 1.2;
-    /* left: 30px; */
 }
-/* .seoul-sns .seoul-box .sc-title::after{
-    content: '';
-    position: absolute;
-    left: 136px;
-    width: 32px;
-    height: 24px;
-    background-position: -247px 0;
-    border-left: 1px solid #878787;
-} */
+
 .seoul-sns .sns-list{
     display: flex;
     justify-content: space-between;
@@ -831,12 +754,11 @@ figcaption{
     transform: translateX(-50%);
     width: 303px;
     height: 40px;
-    /* margin: 0 auto; */
 }
 .seoul-sns .sns-list .link-sns{
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
 }
 .seoul-sns .sns-list .ic-insta{
     background-position: 0 0;
@@ -886,7 +808,6 @@ figcaption{
     overflow: hidden;
 }
 .sc-autoslide .aslide-list{
-    /* width: calc((100% - 43px) / 3); */
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -937,21 +858,16 @@ figcaption{
     text-align: right;
 }
 .sc-autoslide .btn{
-    /* float: right; */
     width: 20px;
     height: 20px;
     border: 1px solid #999;
-    /* border-left: 0; */
     overflow: hidden;
+    box-sizing: border-box;
 }
-/* .sc-autoslide .btn a{
-    width: 100%;
-    height: 100%;
-    display: block;
-} */
 .sc-autoslide .prev{
     background-position: -45px -43px;
     border-right: 0;
+    margin-left: 8px;
 }
 .sc-autoslide .start{
     background-position: -101px -43px;
@@ -964,38 +880,29 @@ figcaption{
     border-left: 0;
 }
 
-.sc-tab{
+.sc-related{
     position: relative;
     margin-bottom: 20px;
-    height: 51px;
+    display: flex;
 }
-.sc-tab .tab-area{
+.sc-related .tab-area{
     overflow: hidden;
-    border-top: 1px solid #d0d0d0;
-    border-bottom: 1px solid #d0d0d0;
+    border: 1px solid #d0d0d0;
     background: #d0d0d0;
-
-    float: left;
-    width: calc(100% / 3);
+    flex: 1;
+}
+.sc-related .tab-area + .tab-area{
+    border-left: 1px solid #d0d0d0;
 }
 /* 자바 */
-.sc-tab .tab-area .tab-title.active{
+.sc-related .tab-area .tab-title.active{
     background: #d0d0d0;
 }
-.sc-tab button{
-    border: none;
-}
-.sc-tab .tab-area li{
-    /* overflow: hidden; */
-    float: left;
-    width: calc(100% / 3);
-}
 
-.sc-tab .tab-area .tab-title{
+.sc-related .tab-area .tab-title{
     display: block;
     width: 100%;
     padding: 16px 0;
-    border-left: 1px solid #d0d0d0;
     background: #f7f7f7;
     color: #333;
     text-align: center;
@@ -1003,15 +910,15 @@ figcaption{
     position: relative;
     padding-right: 20px;
     font-size: 14px;
-
+    box-sizing: border-box;
 }
-.sc-tab .tab-area .tab-title:last-child{
-    border-right: 1px solid #d0d0d0;
+.sc-related .tab-area .tab-title.not .tab-title-arrow::after{
+    display: none;
 }
-.sc-tab .tab-area span{
+.sc-related .tab-area span{
     position: relative;
 }
-.sc-tab .tab-area .tab-title-arrow::after{
+.sc-related .tab-area .tab-title-arrow::after{
     content: '';
     position: absolute;
     top: 6px;
@@ -1026,12 +933,12 @@ figcaption{
     transform-origin: center center;
 }
 /* 자바 */
-.sc-tab .tab-title.active .tab-title-arrow::after{
+.sc-related .tab-title.active .tab-title-arrow::after{
     top: 2px;
     transform: rotate(45deg);
 }
 
-.sc-tab .tab-area ul{
+.sc-related .tab-area ul{
     position: absolute;
     display: none;
     bottom: 50px;
@@ -1044,12 +951,12 @@ figcaption{
     box-sizing: border-box;
     z-index: 10;
 }
-.sc-tab .tab-area li{
+.sc-related .tab-area li{
     float: left;
     width: calc(100% / 4);
     margin-top: 10px;
 }
-.sc-tab .tab-area li a{
+.sc-related .tab-area li a{
     display: block;
     width: 100%;
     color: #555;

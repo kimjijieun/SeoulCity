@@ -23,19 +23,19 @@ $(function () { //로드후 실행
         $(this).parent('.slide-content').addClass('active').siblings('.slide-content').removeClass('active');
 
         if ($(this).parent().hasClass('slide1')) {
-            slide2.autoplay.stop();//서로반대되는건 정지
+            slide2.autoplay.stop();
 
-            if ($(this).parent().find('.pause').hasClass('active')) { //현재 pause에 active가 들어가있냐
+            if ($(this).parent().find('.pause').hasClass('active')) {
                 slide1.autoplay.start(); 
             } else {
                 slide1.autoplay.stop();
             }
             
         } else {
-            slide1.autoplay.stop();//서로반대되는건 정지
+            slide1.autoplay.stop();
 
             if ($(this).parent().find('.pause').hasClass('active')) {
-                slide2.autoplay.start(); //시작할때 자동으로 스타트
+                slide2.autoplay.start();
             } else {
                 slide2.autoplay.stop();
             }
@@ -66,11 +66,9 @@ $(function () { //로드후 실행
         if( $(this).find('.pause').hasClass('active') ){
             slide1.autoplay.stop();
             $(this).find('.start').addClass('active').siblings().removeClass('active');
-            //start를 선택해서 active주고 형제인 pause에서 active빼라
         }else{
             slide1.autoplay.start();
             $(this).find('.pause').addClass('active').siblings().removeClass('active');
-            // pause에서 active를 넣고 형제를 빼라
         }
 
     })
@@ -96,7 +94,7 @@ $(function () { //로드후 실행
             disableOnInteraction: false,
         },
     });
-    slide2.autoplay.stop(); //1번돌아갈때 처음부터 멈춰있었어야하니까
+    slide2.autoplay.stop();
 
     $('.slide2 .btn-play').click(function(e){
         e.preventDefault();
@@ -161,58 +159,22 @@ $('.sc-autoslide .btn-play').click(function(e){
     })
 
 
-
-
-    // var swiper = new Swiper(".slide2 .swiper", {
-    //     navigation: {
-    //       nextEl: ".swiper-button-next",
-    //       prevEl: ".swiper-button-prev",
-    //     },
-    //   });
-
-
-    // 
-    // $('.sc-tab .tab-title').click(function(){
-
-
-
-    //     $('.sc-tab ul').removeClass('active');
-    //     $('.sc-tab ul').stop().slideUp(); //모두 닫는거
-    //     $(this).toggleClass('active');
-    //     $(this).siblings('ul').stop().slideToggle();
-        
-    //     // $('.sc-tab ul').stop().slideUp(); //모두 닫는거
-    //     // $(this).siblings('ul').stop().slideToggle();
-
-    // })
-
-    $('.sc-tab .tab-title').click(function(){
-        //탭버튼을 누를경우
+    $('.sc-related .tab-title').click(function(){
         if ($(this).hasClass('active')) {
-        //탭버튼이 이미 액티브, 즉 열려있을때는
-            $(this).removeClass('active');
-        //탭배경을 지운다
-            $(this).siblings('ul').slideUp();
-        //슬라이드도 닫는다
-        } else {
-        //탭버튼에 액티브가 없다, 즉 안열려 있을경우는
-            $('.sc-tab .tab-title').removeClass('active');
-        //모든 탭배경을 지운다(다른 탭버튼이 이미 배경이 있을수 있으니까)
-            $(this).addClass('active');
-        //누른 탭만 배경을 추가한다
-            $('.sc-tab ul').stop().slideUp();
-        //모든 슬라이드를 닫는다(다른 탭버튼이 액티브가 되서 슬라이드가 열려있을수 있으니까)
-            $(this).siblings('ul').slideDown();
-        //누른 탭버튼의 슬라이드는 다운
-        }
+            $('.sc-related .tab-title').removeClass('active');
+            $(this).siblings('.sub-list').slideUp(200);
+          } else {
+            $('.sc-related .tab-title').removeClass('active').siblings('.sub-list').slideUp(200);
+            $(this).addClass('active').siblings('.sub-list').slideDown(200);
+          } 
     });
 //keyup은 누르고 뗄때 이벤트발생,연관검색어처럼 밑에 좌르륵 나올때
     $('.tab-area li:first-child a').keydown(function(e){
         var v_keyCode = e.keyCode || e.which;
 
         if(v_keyCode == 9 && e.shiftKey){
-            $('.sc-tab ul').stop().slideUp();
-            $('.sc-tab .tab-title').removeClass('active');
+            $('.sc-related ul').stop().slideUp();
+            $('.sc-related .tab-title').removeClass('active').siblings('.sub-list').slideUp(200);
         }
     })
 
@@ -220,19 +182,22 @@ $('.sc-autoslide .btn-play').click(function(e){
         var v_keyCode = e.keyCode || e.which;
 
         if(v_keyCode == 9 && !e.shiftKey){
-            $('.sc-tab ul').stop().slideUp();
-            $('.sc-tab .tab-title').removeClass('active');
+            $('.sc-related ul').stop().slideUp();
+            $('.sc-related .tab-title').removeClass('active').siblings('.sub-list').slideUp(200);
         }
         // alert(153)
     })
 
-
-    // 클릭시 맨위로 올라감
-    $('.btn-top').click(function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, 300);
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 100) {
+            $('.btn-top').removeClass('show');
+        } else {
+        $('.btn-top').addClass('show');
+        }
     })
 
-}) //지우지 마세여
+    $('.btn-top').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 300);
+      })
+})

@@ -9,9 +9,9 @@ body{
     position: relative;
     min-width: 1152px;
 }
-*:focus{
+/* *:focus{
     outline: 3px dotted #ff0000;
-}
+} */
 
 .blind{
     width: 1px;
@@ -38,7 +38,6 @@ body{
 .footer-box .footer-add,
 .chk-wrap .btn-close,
 .prev,
-/* .btn-play, */
 .start,
 .pause,
 .next,
@@ -46,9 +45,8 @@ body{
 .inner1 .link-more,
 .seoul-sns .link-more
 {
-    background-image: url(../image/icon/icon_set_common.png);
+    background-image: url(../image/icon/icon_set_common_2019.png);
     background-repeat: no-repeat;
-    /* background-size: ; */
 }
 
 .slide-wrap .ic-slide,
@@ -64,26 +62,21 @@ body{
     background-repeat: no-repeat;
 }
 
-.seoul-sns .sns-list .ic-insta,
-.seoul-sns .sns-list .ic-facebook,
-.seoul-sns .sns-list .ic-twitter,
-.seoul-sns .sns-list .ic-blog,
-.seoul-sns .sns-list .ic-youtube,
-.seoul-sns .sns-list .ic-kakao
 
-{
-    background: url(../image/icon/ico_sns_list_202205.png);
-    background-repeat: no-repeat;
-}
-
-.sns-link .ic-insta,
-.sns-link .ic-facebook,
-.sns-link .ic-twitter,
-.sns-link .ic-blog,
-.sns-link .ic-youtube,
-.sns-link .ic-kakao,
-.sns-list .ic-kakaoChannel{
-    background: url(../image/icon/ico_sns_list_202205.png);
+.ic-snsInsta,
+.ic-snsFacebook,
+.ic-snsTwitter,
+.ic-snsBlog,
+.ic-snsYoutube,
+.ic-snsKakao,
+.ic-snsChannel,
+.sns-link .link-sns .ic-snsInsta:hover,
+.sns-link .link-sns .ic-snsFacebook:hover,
+.sns-link .link-sns .ic-snsTwitter:hover,
+.sns-link .link-sns .ic-snsBlog:hover,
+.sns-link .link-sns .ic-snsYoutube:hover,
+.sns-link .link-sns .ic-snsKakao:hover{
+    background: url(../image/icon/icon_set_sns.png);
     background-repeat: no-repeat;
 }
 
