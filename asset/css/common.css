@@ -26,7 +26,7 @@ body{
     margin: 0 auto;
     width: 1152px;
 }
-
+body.hidden{overflow: hidden;}
 
 .top-area .logo,
 .bottom-area .btn-search,
@@ -43,7 +43,8 @@ body{
 .next,
 .sc-new .link-more a,
 .inner1 .link-more,
-.seoul-sns .link-more
+.seoul-sns .link-more,
+.media-area .link-more
 {
     background-image: url(../image/icon/icon_set_common_2019.png);
     background-repeat: no-repeat;
@@ -88,5 +89,18 @@ body{
 .sc-slide .control-area .autoplay.active
 {
     background: url(../image/icon/icon_set_common.png);
+    background-repeat: no-repeat;
+}
+
+.prev,
+.btn-play .start,
+.btn-play .pause,
+.next
+{
+    cursor: pointer;
+}
+
+.sns-right .link-sns{
+    background: url(../image/icon/ico-sns-list.png);
     background-repeat: no-repeat;
 }

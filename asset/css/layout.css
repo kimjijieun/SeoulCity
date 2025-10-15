@@ -175,7 +175,7 @@
 .bottom-area .search-area{
     width: 520px;
     height: 42px;
-    border: 3px solid #2292e9;
+    border: 3px solid #0ea888;
     position: absolute;
     left: 50%;
     top: 40px;
@@ -194,7 +194,7 @@
     box-sizing: border-box;
 }
 .bottom-area .search-area input::placeholder{
-    color:#2292e9;
+    color:#0ea888;
 }
 .bottom-area .search-area img{
     position: absolute;
@@ -218,8 +218,11 @@
     height: 36px;
     padding: 0;
     border: 0;
-    background-position: -32px -97px;
+    margin-left: 5px;
+    cursor: pointer;
+    /* background-position: -32px -97px; */
     background-color: transparent;
+    background: url(../image/icon/ico-search-gaurora.png) no-repeat 50% 50%;
 
 }
 .bottom-area .select-area{
@@ -258,6 +261,7 @@
 .bottom-area .weather-area{
     width: 270px;
     height: 85px;
+    margin-right: 73px;
     float: right;
     margin-top: 34px;
 }
@@ -290,6 +294,13 @@
     font-size: 14px;
 }
 .bottom-area .tem2 .fine{ color: #0068b7; }
+.bottom-area .newSeoul-area {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+    width: 74px;
+    height: 47px;
+}
 
 
 
@@ -307,7 +318,7 @@ footer .info-area .info-item{
     color: #636363;
 }
 footer .info-area .info-item:first-child{padding-left: 0;}
-footer .info-area .info-item:nth-child(2){font-weight: bold;}
+footer .info-area .info-item:nth-child(2){font-weight: bold;color: #0c82e9;}
 footer .info-area .info-item+.info-item::before{
     content: '';
     position: absolute;
@@ -318,6 +329,7 @@ footer .info-area .info-item+.info-item::before{
     margin-top: -6px;
     background: #dcdcdc;
 }
+footer .info-area .info-item:last-child::before{display: none;}
 footer .info-area .info-iteam:nth-child(2){
     color: #000;
     font-weight: bold;
@@ -337,83 +349,18 @@ footer .sns-link .sns-item{
 footer .sns-link .sns-item+.sns-item{
     margin-left: 12px;
 }
-.sns-link .link-sns::before{
-    content: '';
-    display: inline-block;
-    width: 24px;
+footer .info-area .info-item:last-child{padding: 12px 0;}
+footer .info-area .kc a{
+    display: block;
+    width: 114px;
     height: 24px;
-    background: url(../image/icon/icon_set_sns.png);
-    background-repeat: no-repeat;
+    background: url(../image/icon/ico-sns-pc.png) no-repeat 0 -30px;
 }
-
-.sns-link .ic-facebook::before{ background-position: -25px 0; }
-.sns-link .ic-insta::before{background-position: -75px 0;}
-.sns-link .ic-youtube::before{background-position: -125px 0;}
-.sns-link .ic-twitter::before{background-position: -50px 0;}
-.sns-link .ic-blog::before{background-position: -150px 0;}
-.sns-link .ic-kakao::before{background-position: -100px 0;}
-.sns-link .ic-channel::before{background-position: -175px 0;}
-
-.sns-link .ic-facebook:hover::before{ background-position: -25px -25px; }
-.sns-link .ic-facebook:hover::before{ background-position: -25px -25px; }
-.sns-link .ic-insta:hover::before{background-position: -75px -25px;}
-.sns-link .ic-youtube:hover::before{background-position: -125px -25px;}
-.sns-link .ic-twitter:hover::before{background-position: -50px -25px;}
-.sns-link .ic-blog:hover::before{background-position: -150px -25px;}
-.sns-link .ic-kakao:hover::before{background-position: -100px -25px;}
-.sns-link .ic-channel:hover::before{background-position: -175px -25px;}
-
-
-.sns-link .link-sns:hover .ic-snsInsta{
-    background-position: -75px 25px;
-}
-.sns-link .link-sns:hover .ic-snsFacebook{
-    background-position: -25px -25px;
-
-    background: url(../image/icon/icon_set_sns.png);
-    background-repeat: no-repeat;
-}
-.sns-link .link-sns:hover .ic-snsTwitter{
-    background-position: -50px 25px;
-}
-.sns-link .link-sns:hover .ic-snsBlog{
-    background-position: -150px 25px;
-}
-.sns-link .link-sns:hover .ic-snsYoutube{
-    background-position: -125px 25px;
-}
-.sns-link .link-sns:hover .ic-snsKakao{
-    background-position: -100px 25px;
-}
-.sns-link .link-sns:hover .ic-snsChannel{
-    background-position: -175px 25px;
-}
-
-
-.sns-item:hover .ic-insta{
-    background-position: -75px -25px;
-}
-.sns-item:hover .ic-facebook{
-    background-position: -25px -25px;
-}
-.sns-item:hover .ic-twitter{
-    background-position: -50px -25px;
-}
-.sns-item:hover .ic-blog{
-    background-position: -150px -25px;
-}
-.sns-item:hover .ic-youtube{
-    background-position: -125px -25px;
-}
-.sns-item:hover .ic-kakao{
-    background-position: -100px -25px;
-}
-
 
 .footer-box{
     position: relative;
     padding: 22px 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .footer-box .footer-add{
     margin-right: 40px;
@@ -428,17 +375,81 @@ footer .sns-link .sns-item+.sns-item{
     display: inline-block;
 }
 .footer-box .addr-area p{
-    padding-bottom: 2px;
+    /* padding-bottom: 2px; */
     font-size: 12px;
     color: #636363;
     line-height: 1.35em;
 }
-.footer-box .copy{ font-size: 11px; }
+.footer-box .copy{ font-size: 11px; color: #636363;}
 .footer-box .footer-mark{
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 0;
 }
+
+.footer-box .addr-area{}
+.footer-box .footer-pop-wrap{
+    display: flex;
+    align-items: center;
+}
+.footer-box .footer-pop-wrap .footer-pop{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.footer-box .footer-pop-wrap .btn-popinfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-size: 14px 14px;
+    background: url(../image/icon/ico-info-gray.png) no-repeat center center;
+    cursor: pointer;
+}
+.footer-box .footer-pop-wrap .footer-pop-cont{
+    display: none;
+    position: absolute;
+    bottom: 26px;
+    left: -16px;
+    width: 400px;
+    padding: 15px 5px 15px 15px;
+    background: #fff;
+    border: 2px solid #0c82e9;
+    border-radius: 15px;
+    color: #636363;
+    font-size: 12px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0,0,0, .15);
+    z-index: 10;
+    letter-spacing: -0.05em;
+    line-height: 1.6;
+}
+.footer-box .footer-pop-wrap .footer-pop-cont::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    left: 14px;
+    width: 25px;
+    height: 16px;
+    background: url(../image/icon/ico-balloon-btm.png) no-repeat;
+}
+.footer-box .footer-pop-wrap .footer-pop-cont.on{
+    display: block;
+}
+.footer-pop-cont span{
+    display: block;
+}
+.footer-pop-cont em{
+    text-decoration: underline
+}
+.footer-pop-cont em b{
+    font-weight: 700;
+}
+.footer-box .footer-pop-wrap .ico-chatbot{margin-left: 5px;}
+
 
 
 .btn-top{

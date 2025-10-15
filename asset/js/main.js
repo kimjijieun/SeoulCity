@@ -200,4 +200,39 @@ $('.sc-autoslide .btn-play').click(function(e){
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 300);
       })
+
+    $('.footer-pop-wrap .btn-popinfo').mouseenter(function(){
+        $('.footer-pop-cont').addClass('on')
+    })
+    $('.footer-pop').mouseleave(function(e){
+        if(!$(e.relatedTarget).closest('.footer-pop').length) {
+        $('.footer-pop-cont').removeClass('on');
+        }
+    })
+
+    // 슬라이드전체보기
+    $('.btn-all').click(function(e){
+        e.preventDefault();
+        $('.banner-all-wrap').addClass('on')
+        $('body').addClass('hidden')
+    })
+    $('.btn-all-close').click(function(e){
+        e.preventDefault();
+        $('.banner-all-wrap').removeClass('on')
+        $('body').removeClass('hidden')
+    })
+
+
+    $('.slide2 .btn-play').click(function(e){
+        e.preventDefault();
+
+        if( $(this).find('.pause').hasClass('active') ){
+            slide2.autoplay.stop();
+            $(this).find('.start').addClass('active').siblings().removeClass('active');
+        }else{
+            slide2.autoplay.start();
+            $(this).find('.pause').addClass('active').siblings().removeClass('active');
+        }
+
+    })
 })
